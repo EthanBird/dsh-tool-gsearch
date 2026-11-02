@@ -1,0 +1,9 @@
+# dsh-tool-gsearch — Google Search (grounding) through the Antigravity
+# subscription wire, registered as a DSH web search provider.
+- insert:
+    - id: web-search-antigravity
+      name: dsh-tool-gsearch
+      config:
+        providerId: antigravity-google
+        model: gemini-3.5-flash-lite
+        maxResults: 16

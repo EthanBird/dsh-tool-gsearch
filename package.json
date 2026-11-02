@@ -1,0 +1,41 @@
+{
+  "name": "dsh-tool-gsearch",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness (DSH) web search provider backed by Antigravity (Cloud Code Assist) Google Search grounding with multi-account pool failover",
+  "type": "module",
+  "license": "MIT",
+  "author": "EthanBird",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EthanBird/dsh-tool-gsearch.git"
+  },
+  "homepage": "https://github.com/EthanBird/dsh-tool-gsearch#readme",
+  "bugs": {
+    "url": "https://github.com/EthanBird/dsh-tool-gsearch/issues"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "gsearch": "./bin/gsearch.mjs"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib/*.js",
+    "bin/*.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@cortexkit/antigravity-auth-core": "^2.2.0 || ^3.0.0"
+  }
+}
